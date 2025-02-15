@@ -856,18 +856,19 @@
   <section class="hobbies">
     <h2><i class="bi bi-music-note-beamed section-icon"></i> Hobbies</h2>
     <div class="hobby-list">
-     <div class="hobby-card">
-  <div class="video-preview">
-    <video
-      src="videos/VID-20230511-WA0010.mp4"
-      muted
-      autoplay
-      loop
-    ></video>
-  </div>
-  <h3>Singing</h3>
-  <p>I love singing and performing my favorite songs, which keeps me creative and relaxed.</p>
+   <div class="video-preview">
+  <video
+    class="click-to-unmute"
+    src="../videos/VID-20230511-WA0010.mp4"
+    muted
+    autoplay
+    loop
+    playsinline  <!-- Important for mobile browsers to allow inline playback -->
+  ></video>
 </div>
+<h3>Singing</h3>
+<p>I love singing and performing my favorite songs, which keeps me creative and relaxed.</p>
+
 
       <div class="hobby-card">
   
@@ -1058,6 +1059,16 @@
       origin: 'bottom',
       distance: '50px'
     });
+    document.addEventListener('DOMContentLoaded', function() {
+    const video = document.querySelector('.click-to-unmute');
+
+    // By default, the video is muted and autoplaying (per HTML attributes).
+    // On click, toggle the muted state.
+    video.addEventListener('click', function() {
+      // Toggle between muted and unmuted
+      video.muted = !video.muted;
+    });
+  });
   </script>
 </body>
 </html>
