@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IOT Programmable Energy Meter</title>
+  <!-- Google Font: Poppins -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #e0eafc, #cfdef3);
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #007BFF, #0056b3);
+      color: #fff;
+      padding: 20px 10px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+    header p {
+      margin: 5px 0 0;
+      font-size: 1.1rem;
+    }
+    section {
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 1000px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    section h2 {
+      border-bottom: 2px solid #007BFF;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    section p, section ul {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+    /* Gallery Styles */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .gallery figure {
+      margin: 15px;
+      text-align: center;
+    }
+    .gallery img {
+      width: 350px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 4px;
+      transition: transform 0.3s;
+      cursor: pointer;
+      border: 1px solid #ccc;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    figcaption {
+      margin-top: 10px;
+      font-style: italic;
+      font-size: 0.9rem;
+    }
+    /* Modal Styles */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 100;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 80%;
+    }
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .close:hover {
+      color: #bbb;
+    }
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      .gallery figure {
+        width: 100%;
+      }
+      .gallery img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>IOT Programmable Energy Meter for Electrical Load Survey</h1>
+    <p> Mini Project </p>
+  </header>
+
+  <!-- Abstract Section -->
+  <section id="abstract">
+    <h2>Abstract</h2>
+    <p>
+      This project is designed to evaluate the consumption of any load in units and cost in rupees based on the energy tariff and the number of hours the load is used. The evaluation is nearly instantaneous, saving valuable time during load surveys. The system uses a microcontroller from the ARDUINO family to calculate the units consumed and the corresponding cost, with user inputs provided via push button switches. The data is then displayed on an LCD. Future enhancements include remote monitoring and load control via a GSM modem.
+    </p>
+  </section>
+
+  <!-- Objective Section -->
+  <section id="objective">
+    <h2>Objective</h2>
+    <p>
+      The aim of this project is to create a power meter that enables interoperability among multiple meters distributed across a grid. A software-based control panel (running on a server) is developed to communicate with each meter, simulating a smart power grid control center. This system allows the control station to acquire data simultaneously from various meters and even reconfigure or reprogram individual meters remotely.
+    </p>
+  </section>
+
+  <!-- Project Images Section -->
+  <section id="images">
+    <h2>Project Images</h2>
+    <div class="gallery">
+      <figure>
+        <img src="../images/blockdiagram.png" alt="Block Diagram" />
+        <figcaption>Proposed Block Diagram</figcaption>
+      </figure>
+      <figure>
+        <img src="../images/ExperimentalModel.png" alt="Experimental Model" />
+        <figcaption>Experimental Model</figcaption>
+      </figure>
+      <figure>
+        <img src="../images/Resultoutcome.png" alt="Result Outcome" />
+        <figcaption>Result Outcome</figcaption>
+      </figure>
+      <figure>
+        <img src="../images/Resultobtained.png" alt="Result Obtained" />
+        <figcaption>Result Obtained</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Conclusion Section -->
+  <section id="conclusion">
+    <h2>Conclusion</h2>
+    <p>
+      The project demonstrates that real-time monitoring of electrical appliances is achievable through a dedicated website. The processed voltage and current values are displayed on an LCD screen and can be controlled via an application. Simulation using Proteus software confirms that the sensor networks can be effectively deployed in smart grids for continuous monitoring. Additionally, security features such as notifications for load theft further enhance system reliability.
+    </p>
+  </section>
+
+  <!-- Applications and Advantages Section -->
+  <section id="applications-advantages">
+    <h2>Applications &amp; Advantages</h2>
+    <h3>Applications</h3>
+    <ul>
+      <li>Military applications</li>
+      <li>Power plants</li>
+      <li>Remote energy monitoring and control</li>
+    </ul>
+    <h3>Advantages</h3>
+    <ul>
+      <li>Calibrated and tested sensing module for accuracy</li>
+      <li>Effective deployment in smart grids using wireless sensor networks</li>
+      <li>Reliable and cost-effective solution</li>
+      <li>Reduced manual labor for energy monitoring</li>
+    </ul>
+  </section>
+
+  <!-- Modal for Image Preview -->
+  <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img" />
+    <div id="caption" style="text-align: center; color: #fff; padding-top: 10px;"></div>
+  </div>
+
+  <!-- JavaScript for Modal Functionality -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var modal = document.getElementById("modal");
+      var modalImg = document.getElementById("modal-img");
+      var captionText = document.getElementById("caption");
+      var images = document.querySelectorAll(".gallery img");
+
+      images.forEach(function(img) {
+        img.addEventListener("click", function() {
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt;
+        });
+      });
+
+      var closeBtn = document.getElementsByClassName("close")[0];
+      closeBtn.addEventListener("click", function() {
+        modal.style.display = "none";
+      });
+
+      // Close modal when clicking outside the image
+      window.addEventListener("click", function(event) {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    });
+  </script>
+</body>
+</html>

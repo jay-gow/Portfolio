@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Automatic Self Cleaning Toilet System</title>
+  <!-- Google Font for enhanced typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Base Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      /* A gentle linear gradient background */
+      background: linear-gradient(135deg, #eef2f3, #8e9eab);
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      /* Linear gradient for a dynamic header background */
+      background: linear-gradient(to right, #00695c, #33aebf);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    section {
+      max-width: 900px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    section h2 {
+      color: #00695c;
+      border-bottom: 2px solid #00695c;
+      padding-bottom: 5px;
+    }
+    p, ul {
+      margin: 10px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    /* Media Gallery */
+    .media-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+    .media-item {
+      background: #f8f8f8;
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: center;
+      transition: transform 0.2s;
+      cursor: pointer;
+    }
+    .media-item:hover {
+      transform: scale(1.02);
+    }
+    .media-item img, .media-item video {
+      width: 100%;
+      height: auto;
+    }
+    .media-item p {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+    }
+    /* Modal Popup Styles */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.8);
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-content {
+      max-width: 90%;
+      max-height: 90%;
+      margin: auto;
+      display: block;
+    }
+    .modal-content img,
+    .modal-content video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Automatic Self Cleaning Toilet System</h1>
+  </header>
+
+  <section id="abstract">
+    <h2>Abstract</h2>
+    <p>
+      In today’s world with the ever-increasing population, hygiene is a top priority. With the “Swachh Bharat Abhiyan” in full swing, our Smart Toilet project uses sensor management (smell, IR, ultrasonic, and color sensors) to monitor and automate the cleaning process. The system manages toilet seat operations, monitors cleanliness and sweeper activity, and helps conserve water.
+    </p>
+  </section>
+  <section id="media">
+    <h2>Project Media</h2>
+    <div class="media-gallery">
+      <!-- Prototype Image -->
+      <div class="media-item">
+        <img src="../images/toilet3.png" alt="Prototype Image 1">
+        <p>Prototype Image 1</p>
+      </div>
+      <div class="media-item">
+        <img src="../images/toilet2.png" alt="Prototype Image 2">
+        <p>Prototype Image 2</p>
+      </div>
+      
+      <!-- Video -->
+      <div class="media-item">
+        <video>
+          <source src="../videos/c3e57c16-21b4-47c0-a64a-e903523f9202.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p>Project Demonstration Video</p>
+      </div>
+      
+      <!-- Certificate -->
+      <div class="media-item">
+        <img src="../images/certificate.png" alt="Project Certificate">
+        <p>Project Certificate</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="block-diagram">
+    <h2>Block Diagram</h2>
+    <img src="../images/blockfinal.png" alt="Block Diagram of Proposed System">
+  </section>
+
+  <section id="advantages">
+    <h2>Advantages</h2>
+    <ul>
+      <li>User friendly toilets</li>
+      <li>Encompasses all hygiene activities</li>
+      <li>Could also be used as a bathroom</li>
+      <li>Includes hand washing facilities and hygiene kits</li>
+      <li>Features water storage for cleaning and proper ventilation</li>
+      <li>Lighting and roofing provisions</li>
+      <li>Twin pit toilets for sustainable usage and maintenance</li>
+      <li>Proper recycling of waste</li>
+    </ul>
+  </section>
+
+  <section id="applications">
+    <h2>Applications</h2>
+    <ul>
+      <li>Smart City and Municipal Corporations</li>
+      <li>Metrocities</li>
+      <li>Industrial and Roadside Toilets</li>
+    </ul>
+  </section>
+
+  <!-- Modal Popup Container -->
+  <div id="modal" class="modal">
+    <span id="modal-close" class="close">&times;</span>
+    <div id="modal-content" class="modal-content"></div>
+  </div>
+
+  <script>
+    // Get modal elements
+    const modal = document.getElementById('modal');
+    const modalContent = document.getElementById('modal-content');
+    const closeButton = document.getElementById('modal-close');
+
+    // Function to open modal with media content
+    function openModal(mediaElement) {
+      // Clear previous modal content
+      modalContent.innerHTML = '';
+
+      if (mediaElement.tagName.toLowerCase() === 'img') {
+        // Create an enlarged image element
+        const img = document.createElement('img');
+        img.src = mediaElement.src;
+        modalContent.appendChild(img);
+      } else if (mediaElement.tagName.toLowerCase() === 'video') {
+        // Create a video element with same source and autoplay it
+        const video = document.createElement('video');
+        video.src = mediaElement.querySelector('source').src;
+        video.controls = true;
+        video.autoplay = true;
+        modalContent.appendChild(video);
+      }
+
+      // Display the modal
+      modal.style.display = 'flex';
+    }
+
+    // Add click event listener to all media items (images and videos)
+    document.querySelectorAll('.media-item img, .media-item video').forEach(item => {
+      item.addEventListener('click', function(event) {
+        event.stopPropagation();
+        openModal(item);
+      });
+    });
+
+    // Close the modal when clicking the close button
+    closeButton.addEventListener('click', function() {
+      modal.style.display = 'none';
+      modalContent.innerHTML = '';
+    });
+
+    // Close the modal if clicking outside the modal content
+    modal.addEventListener('click', function(event) {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+        modalContent.innerHTML = '';
+      }
+    });
+  </script>
+</body>
+</html>
