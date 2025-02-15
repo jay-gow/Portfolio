@@ -624,18 +624,28 @@
   height: 100%;
 }
 .video-preview {
-  width: 100%;
-  height: 200px;      /* Set a fixed height; adjust this value to control how much is visible */
-  overflow: hidden;   /* Hide the rest of the video */
-  position: relative;
+  /* Fixed width & height to "crop" the video area */
+  width: 200px;          /* Adjust as needed */
+  height: 200px;         /* Adjust as needed */
+  margin: 0 auto;        /* Center this container in its parent */
+  position: relative;    /* So the video can be absolutely positioned */
+  overflow: hidden;      /* Hide the rest of the video */
+  background: #000;      /* Optional background color behind the video */
 }
 
 .video-preview video {
-  width: 100%;
-  height: auto;
   position: absolute;
-  top: 0;             /* Adjust this if you want to show a different portion of the video */
+  /* Center horizontally by shifting left 50% and translating back 50% of its width */
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* Fill the container’s height so the snippet is exactly 200px tall */
+  height: 100%;
+  width: auto; /* Keep aspect ratio by letting width adjust automatically */
+
+  /* If you want to shift the video up/down, you could also use "top" or transformY. */
 }
+
 
   </style>
 </head>
@@ -846,13 +856,19 @@
   <section class="hobbies">
     <h2><i class="bi bi-music-note-beamed section-icon"></i> Hobbies</h2>
     <div class="hobby-list">
-      <div class="hobby-card">
-        <div class="video-preview">
-    <video src="videos/VID-20230511-WA0010.mp4" muted autoplay loop></video>
+     <div class="hobby-card">
+  <div class="video-preview">
+    <video
+      src="../videos/VID-20230511-WA0010.mp4"
+      muted
+      autoplay
+      loop
+    ></video>
   </div>
-        <h3>Singing</h3>
-        <p>I love singing and performing my favorite songs, which keeps me creative and relaxed.</p>
-      </div>
+  <h3>Singing</h3>
+  <p>I love singing and performing my favorite songs, which keeps me creative and relaxed.</p>
+</div>
+
       <div class="hobby-card">
   
         <h3>Learning Music</h3>
